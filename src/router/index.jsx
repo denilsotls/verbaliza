@@ -14,8 +14,8 @@ export default function Router() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen options={{headerTransparent: true, headerShown: false}} name="Login" component={Login} />
+        <Stack.Screen options={{headerTransparent: true, headerShown: false}} name="Home" component={Home} />
         <Stack.Screen name="Translator" component={Translator} />
         <Stack.Screen name="Results" component={Results} />
 

@@ -1,12 +1,14 @@
-import { View, Text, Button, TouchableOpacity } from "react-native";
-import ButtonVerde from "../Login/style";
+import { View, Text, TouchableOpacity,} from "react-native";
+import styles from "./styles";
 
 export default function Home({navigation}){
     return(
-        <View>
-            <Text>Home</Text>
-            <ButtonVerde onPress={()=> navigation.navigate('Translator')}><Text>Proximo</Text></ButtonVerde>
-            <ButtonVerde onPress={()=> navigation.goBack()}><Text>Voltar</Text></ButtonVerde>
+        <View style={styles.container}>
+            <Text style={styles.textHome}>Verbaliza</Text>
+            <Text style={styles.apresentacao}>Bem vindo ao Verbaliza {'\n'} Aqui você transforma {'\n'}        texto em áudio</Text>
+            <TouchableOpacity style={styles.buttonHome} onPress={()=> navigation.navigate('Translator')}><Text style={styles.textButton}>Proximo</Text></TouchableOpacity>
+            
+            
             
         </View>
     )
